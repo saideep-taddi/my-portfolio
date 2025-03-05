@@ -169,6 +169,19 @@ document.addEventListener("click", function (event) {
         });
     }
 });
+document.addEventListener("contextmenu", (e) => {
+    if (e.target.closest("iframe")) {
+        e.preventDefault();
+    }
+});
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        document.body.style.filter = "blur(10px)";
+    } else {
+        document.body.style.filter = "none";
+    }
+});
+
 window.onload = function () {
     document.body.style.overflow = "auto";
     typeWriter();
