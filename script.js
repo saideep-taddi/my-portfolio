@@ -175,31 +175,3 @@ window.onload = function () {
     document.body.style.overflow = "auto";
     typeWriter();
 };
-//contact section//
-document.querySelector(".contact-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const formMessage = document.querySelector("#form-message");
-
-    // Convert form data to JSON
-    const formData = new FormData(form);
-    
-    const response = await fetch(form.action, {
-        method: "POST",
-        body: formData
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-        formMessage.style.display = "block";
-        formMessage.style.color = "green";
-        formMessage.textContent = "✅ Your message has been sent successfully!";
-        form.reset();
-    } else {
-        formMessage.style.display = "block";
-        formMessage.style.color = "red";
-        formMessage.textContent = "❌ Error sending message. Please try again.";
-    }
-});
