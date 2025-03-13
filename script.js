@@ -169,9 +169,23 @@ document.addEventListener("click", function (event) {
         });
     }
 });
-
-
 window.onload = function () {
     document.body.style.overflow = "auto";
     typeWriter();
 };
+
+
+function toggleSkills() {
+    let skillsList = document.getElementById("skillsList");
+    let button = document.querySelector(".unlock-btn");
+    let icon = button.querySelector("i");
+
+    if (skillsList.style.display === "none" || skillsList.style.display === "") {
+        skillsList.style.display = "block";
+        button.innerHTML = '<i class="fa-solid fa-lock-open"></i> Hide Skills'; // Change to Hide Skills
+    } else {
+        skillsList.style.display = "none";
+        button.innerHTML = '<i class="fa-solid fa-lock"></i> Unlock Skills'; // Change back to Unlock Skills
+    }
+}
+
