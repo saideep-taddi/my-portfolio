@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Saideep Taddi Portfolio</title>
@@ -37,7 +38,7 @@
     <section>
         <div class="main-container">
             <div class="image" data-aos="zoom-out" >
-                <img src="./SDT.jpeg" alt="">
+                <img src="images/SDT.jpeg" alt="">
             </div>
             <div class="content">
                 <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Saideep</span></h1>
@@ -46,61 +47,93 @@
             </div>
         </div>
     </section>
-<section id="skills">
-    <h2  class="section-header">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-box" onclick="toggleSkills('programming')">Programming & Scripting</div>
-            <div class="skill-box" onclick="toggleSkills('methodologies')">Methodologies</div>
-            <div class="skill-box" onclick="toggleSkills('data-visualization')">Data Visualization</div>
-            <div class="skill-box" onclick="toggleSkills('version-control')">Version Control</div>
-            <div class="skill-box" onclick="toggleSkills('databases')">Databases</div>
-            <div class="skill-box" onclick="toggleSkills('etl-tools')">ETL Tools</div>
-            <div class="skill-box" onclick="toggleSkills('data-analysis')">Data Analysis</div>
-            <div class="skill-box" onclick="toggleSkills('big-data')">Big Data & Machine Learning</div>
-            <div class="skill-box" onclick="toggleSkills('frameworks')">Libraries & Frameworks</div>
-            <div class="skill-box" onclick="toggleSkills('cloud')">Cloud Platforms</div>
-        </div> 
-        <div class="skills-details" id="programming">
-            <h3>Programming & Scripting</h3>
-            <p>Python, SQL, R</p>
+<!-- Skills Section -->
+<section class="skills-galaxy">
+    <h2 class="skills-title">Technical Skills</h2>
+    <div class="skills-container">
+        <!-- Row 1 -->
+        <div class="skill"><i class="fab fa-python"></i>Python</div>
+        <div class="skill"><i class="fab fa-r-project"></i>R</div>
+        <div class="skill"><i class="fas fa-database"></i>SQL</div>
+
+        <!-- Row 2 -->
+        <div class="skill"><i class="fab fa-microsoft"></i>Power BI</div>
+        <div class="skill"><i class="fab fa-tableau"></i>Tableau</div>
+        <div class="skill"><i class="fas fa-chart-line"></i>Looker Studio</div>
+
+        <!-- Row 3 -->
+        <div class="skill"><i class="fas fa-database"></i>Hadoop</div>
+        <div class="skill"><i class="fas fa-database"></i>Spark</div>
+        <div class="skill"><i class="fab fa-google"></i>BigQuery</div>
+        <div class="skill"><i class="fab fa-aws"></i>AWS</div>
+
+        <!-- Row 4 -->
+        <div class="skill"><i class="fas fa-server"></i>MySQL</div>
+        <div class="skill"><i class="fas fa-database"></i>PostgreSQL</div>
+        <div class="skill"><i class="fas fa-database"></i>MongoDB</div>
+        <div class="skill"><i class="fas fa-cloud"></i>Azure</div>
+
+        <!-- Row 5 -->
+        <div class="skill"><i class="fas fa-cogs"></i>ETL</div>
+        <div class="skill"><i class="fas fa-code"></i>RESTful APIs</div>
+        <div class="skill"><i class="fab fa-docker"></i>Docker</div>
+        <div class="skill"><i class="fab fa-kubernetes"></i>Kubernetes</div>
+    </div>
+    
+           <!-- View All Skills Button -->
+            <button class="view-all-btn unlock-btn" onclick="toggleSkills()">
+                <i class="fa-solid fa-lock"></i> Unlock Skills
+            </button>
+
+            <!-- Skills List (Initially Hidden) -->
+            <div class="skills-list" id="skillsList">
+                <div class="skill-category">
+                    <h3>Programming & Scripting</h3>
+                    <p>Python, R, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Methodologies</h3>
+                    <p>Agile, Waterfall</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Visualization</h3>
+                    <p>Power BI, Tableau, Microsoft Excel, Looker Studio</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Version Control & DevOps Tools</h3>
+                    <p>Git, GitHub, Docker, Jenkins, Terraform, Visual Studio Code</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <p>MySQL, SQL, Oracle, MongoDB, NoSQL, Cassandra</p>
+                </div>
+                <div class="skill-category">
+                    <h3>ETL Tools</h3>
+                    <p>Informatica, Apache Airflow, SSIS, Snowflake, Talend, Apache Nifi, Spark</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Analysis</h3>
+                    <p>Data Mining, Reporting, A/B Testing, Data Warehousing</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Big Data & Machine Learning</h3>
+                    <p>Hadoop, Spark, Cassandra, Kafka, HDFS, MapReduce, ML (CNN, LSTM)</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries & Frameworks</h3>
+                    <p>NumPy, Pandas, SciPy, PySpark, Matplotlib, Flask, Django, Bootstrap</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <p>AWS (S3, EC2, Redshift, IAM, Glue, Athena, QuickSight), Azure (Databricks, Data Lake, Data Factory, Azure Synapse Analytics)</p>
+                </div>
+            </div>
         </div>
-        <div class="skills-details" id="methodologies">
-            <h3>Methodologies</h3>
-            <p>Agile, Waterfall</p>
-        </div>
-        <div class="skills-details" id="data-visualization">
-            <h3>Data Visualization</h3>
-            <p>Power BI, Tableau, Microsoft Excel, Looker Studio</p>
-        </div>
-        <div class="skills-details" id="version-control">
-            <h3>Version Control & Others</h3>
-            <p>Git, GitHub, Docker, Jenkins, Terraform, Visual Studio Code</p>
-        </div>
-        <div class="skills-details" id="databases">
-            <h3>Databases</h3>
-            <p>MySQL, SQL, Oracle, MongoDB, NoSQL, Cassandra</p>
-        </div>
-        <div class="skills-details" id="etl-tools">
-            <h3>ETL Tools</h3>
-            <p>Informatica, Apache Airflow, SSIS, Snowflake, Talend, Apache Nifi, Spark</p>
-        </div>
-        <div class="skills-details" id="data-analysis">
-            <h3>Data Analysis</h3>
-            <p>Data Mining, Reporting, A/B Testing, Data Warehousing</p>
-        </div>
-        <div class="skills-details" id="big-data">
-            <h3>Big Data & Machine Learning</h3>
-            <p>Hadoop, Spark, Cassandra, Kafka, HDFS, MapReduce, ML (CNN, LSTM)</p>
-        </div>
-        <div class="skills-details" id="frameworks">
-            <h3>Libraries & Frameworks</h3>
-            <p>NumPy, Pandas, SciPy, PySpark, Matplotlib, Flask, Django, Bootstrap</p>
-        </div>
-        <div class="skills-details" id="cloud">
-            <h3>Cloud Platforms</h3>
-            <p>AWS (S3, EC2, Redshift, IAM, Glue, Athena, QuickSight), Azure (Databricks, Data Lake, Data Factory, Azure Synapse Analytics)</p>
-        </div>
+  
+    
 </section>
+
+
 <section id="experience">
     <h2 class="section-header">Experience</h2>
     <div class="experience-container">
@@ -117,78 +150,63 @@
 
     <div class="experience-details" id="merck">
         <h3>Data Analyst - MERCK </h3>
-
-<p>Analyzed electronic health records (EHR) and claims data with Python (Pandas, NumPy) to identify workflow bottlenecks, reducing claim processing time by 8 hours weekly.</p>
-<p>Built and maintained Azure (Azure VMs, Azure Blob Storage) data pipelines to process healthcare data, cutting query response time from 5 minutes to 2 minutes.</p>
-<p>Secured 500M+ patient records and claims data in HIPAA-compliant Azure Storage systems with encryption and compliance safeguards to ensure privacy and regulatory adherence.</p>
-<p>Facilitated Power BI dashboards integrating data from EHR systems, billing platforms, and other sources to monitor KPIs like patient wait times and ER overcrowding.</p>
-<p>Streamlined ETL workflows using Azure Data Factory reducing manual processing time from 12 hours to 4 hours weekly, ensuring seamless data ingestion and transformation.</p>
-<p>Created visualizations (Seaborn) to track population health trends across 10,000+ patient records.</p>
-<p>Deployed SQL queries for Azure Database for MySQL to generate reports on metrics like patient readmission rates, reducing report runtime from 10 minutes to 3 minutes.</p>
-<p>Automated data extraction and transformation using Azure Logic Apps, saving 10 hours weekly on manual data processing tasks.</p>
+            <p>Analyzed electronic health records (EHR) and claims data with <strong>Python (Pandas, NumPy)</strong> to identify workflow bottlenecks, reducing claim processing time by 8 hours weekly.</p>
+        
+            <p>Built and maintained <strong>Azure (Azure VMs, Azure Blob Storage)</strong> data pipelines to process healthcare data, cutting query response time from 5 minutes to 2 minutes.</p>
+        
+            <p>Secured 500M+ patient records and claims data in <strong>HIPAA-compliant Azure Storage</strong> systems with encryption and compliance safeguards to ensure privacy and regulatory adherence.</p>
+        
+            <p>Facilitated <strong>Power BI</strong> dashboards integrating data from <strong>EHR systems</strong>, billing platforms, and other sources to monitor KPIs like patient wait times and ER overcrowding.</p>
+        
+            <p>Streamlined <strong>ETL workflows</strong> using <strong>Azure Data Factory</strong>, reducing manual processing time from 12 hours to 4 hours weekly, ensuring seamless data ingestion and transformation.</p>
+        
+            <p>Created visualizations using <strong>Seaborn</strong> to track population health trends across 10,000+ patient records.</p>
+        
+            <p>Deployed <strong>SQL queries</strong> for <strong>Azure Database for MySQL</strong> to generate reports on metrics like patient readmission rates, reducing report runtime from 10 minutes to 3 minutes.</p>
+        
+            <p>Automated data extraction and transformation using <strong>Azure Logic Apps</strong>, saving 10 hours weekly on manual data processing tasks.</p>
     </div>
     <div class="experience-details" id="cvs">
         <h3>Data Analyst - CVS Health</h3>
-        <p>Developed and implemented automated solutions using Automation Anywhere 360, resulting in a significant reduction in manual processing time and operational costs.</p>
-        <p>Designed, configured, and maintained RPA bots, achieving a 30% improvement in workflow efficiency and accuracy.</p>
-        <p>Collaborated with cross-functional teams to identify and assess automation opportunities, leading to the successful deployment of 15+ RPA solutions tailored to business needs.</p>
-        <p>Conceptualized batch processing applications using Spark APIs and in-memory computing to automate healthcare data workflows, managing 5+ TB of patient records stored in AWS S3-based Data Lakes.</p>
-        <p>Crafted 10+ scalable data pipelines on AWS (EMR, EC2, Glue, Lambda, Redshift, RDS) to streamline member
-eligibility and provider network analytics, improving data accessibility for clinical analytics.</p>
-<p>Executed ETL/ELT workflows using Redshift transforming 10+ TB of raw healthcare data into structured insights supporting cost analysis and population health management.</p>
-    <p>Built Python-based ETL pipelines to consolidate fragmented healthcare data into centralized HIPAA-compliant storage, ensuring seamless access for downstream analytics and reporting.</p>
-        <p>Collaborated with cross-functional teams to identify and assess automation opportunities, leading to the successful deployment of 15+ RPA solutions tailored to business needs.</p>
-            <p>Provided training and support to end-users, facilitating a smooth transition, and ensuring effective utilization of automated systems.</p>
-                <p>Coordinated with stakeholders to gather requirements and ensure alignment with project goals, delivering solutions that met client expectations.</p>
+        <p>Developed and implemented automated solutions using <strong>Automation Anywhere 360</strong>, resulting in a significant reduction in manual processing time and operational costs.</p>
+
+    <p>Designed, configured, and maintained <strong>RPA bots</strong>, achieving a 30% improvement in workflow efficiency and accuracy.</p>
+
+    <p>Collaborated with cross-functional teams to identify and assess automation opportunities, leading to the successful deployment of <strong>15+ RPA solutions</strong> tailored to business needs.</p>
+
+    <p>Conceptualized batch processing applications using <strong>Spark APIs</strong> and in-memory computing to automate healthcare data workflows, managing <strong>5+ TB</strong> of patient records stored in <strong>AWS S3-based Data Lakes</strong>.</p>
+
+    <p>Crafted <strong>10+ scalable data pipelines</strong> on <strong>AWS (EMR, EC2, Glue, Lambda, Redshift, RDS)</strong> to streamline member eligibility and provider network analytics, improving data accessibility for clinical analytics.</p>
+
+    <p>Executed <strong>ETL/ELT workflows</strong> using <strong>Redshift</strong>, transforming <strong>10+ TB</strong> of raw healthcare data into structured insights supporting cost analysis and population health management.</p>
+
+    <p>Built <strong>Python-based ETL pipelines</strong> to consolidate fragmented healthcare data into centralized <strong>HIPAA-compliant storage</strong>, ensuring seamless access for downstream analytics and reporting.</p>
+
+    <p>Collaborated with cross-functional teams to identify and assess automation opportunities, leading to the successful deployment of <strong>15+ RPA solutions</strong> tailored to business needs.</p>
+
+    <p>Provided training and support to end-users, facilitating a smooth transition and ensuring effective utilization of automated systems.</p>
+
+    <p>Coordinated with stakeholders to gather requirements and ensure alignment with project goals, delivering solutions that met client expectations.</p>
+
     </div>
     <div class="experience-details" id="cipla">
         <h3>Data Analyst - Cipla</h3>
-        <p>Executed predictive analytics (SQL) on 6,000+ anonymized patient records to uncover drug efficacy patterns, informing strategic decisions for drug development initiatives, including dosage optimization.</p>
-        <p>Leveraged legacy SQL queries and Tableau data sources, boosting report generation efficiency by enhancing usability for 12+ global stakeholders in regulatory and supply chain teams.</p>
-            <p>Streamlined Salesforce data extraction workflows using Django Celery tasks, improving report accuracy and timeliness for 50+ healthcare partners, reducing discrepancies in monthly compliance audits.</p>
-                <p>Formulated Tableau dashboards to visualize real-time sales performance and patient adherence metrics, enabling stakeholders to resolve operational inefficiencies and save 2.5 hours weekly in the pro</p>
-                    <p>Collaborated in Agile sprints to align analytics deliverables with FDA compliance timelines, reducing task completion time by 1.2 hours per sprint through improved backlog prioritization.</p>
-                        <p>Devised AWS Redshift data warehouses to consolidate pharmacovigilance data, achieving 500 ms query latency and maintaining HIPAA-compliant storage for 1M+ patient records.</p> 
-                            <p>Automated data extraction and transformation using AWS Glue, reducing manual processing time by 6 hours weekly and ensuring data integrity for 10+ clinical trials.</p>
-            
+            <p>Executed predictive analytics using <strong>SQL</strong> on 6,000+ anonymized patient records to uncover drug efficacy patterns, informing strategic decisions for drug development initiatives, including dosage optimization.</p>
+        
+            <p>Leveraged legacy <strong>SQL queries</strong> and <strong>Tableau</strong> data sources, boosting report generation efficiency by enhancing usability for 12+ global stakeholders in regulatory and supply chain teams.</p>
+        
+            <p>Streamlined <strong>Salesforce</strong> data extraction workflows using <strong>Django Celery tasks</strong>, improving report accuracy and timeliness for 50+ healthcare partners, reducing discrepancies in monthly compliance audits.</p>
+        
+            <p>Formulated <strong>Tableau dashboards</strong> to visualize real-time sales performance and patient adherence metrics, enabling stakeholders to resolve operational inefficiencies and save 2.5 hours weekly in the process.</p>
+        
+            <p>Collaborated in <strong>Agile sprints</strong> to align analytics deliverables with <strong>FDA compliance</strong> timelines, reducing task completion time by 1.2 hours per sprint through improved backlog prioritization.</p>
+        
+            <p>Devised <strong>AWS Redshift data warehouses</strong> to consolidate pharmacovigilance data, achieving <strong>500 ms query latency</strong> and maintaining <strong>HIPAA-compliant storage</strong> for 1M+ patient records.</p>
+        
+            <p>Automated data extraction and transformation using <strong>AWS Glue</strong>, reducing manual processing time by 6 hours weekly and ensuring data integrity for 10+ clinical trials.</p>
     </div>
 </section>
-<!--<section id="projects">
-    <h2 class="section-header">Projects</h2>
 
-    <div class="projects-container">
-        <div class="project-box" onclick="toggleProject('california-housing')">
-            <h3>California House Price Prediction with R Shiny</h3>
-        </div>
-        <div class="project-box" onclick="toggleProject('amazon-sales')">
-            <h3>Amazon Product Sales Analysis with GCP and Looker Studio</h3>
-        </div>
-        <div class="project-box" onclick="toggleProject('cms-data')">
-            <h3>Analysis of CMS Data for Healthcare Insights</h3>
-        </div>
-    </div>
-    
-    <div class="project-details" id="california-housing">
-        <h3>California House Price Prediction with R Shiny</h3>
-        <p>Formulated interactive R Shiny web app for predicting California house prices.</p>
-        <p>Conducted comprehensive data exploration and implemented interactive map functionality.</p>
-        <p>Utilized machine learning for predictive modeling and created intuitive user interface.</p>
-    </div>
-    <div class="project-details" id="amazon-sales">
-        <h3>Amazon Product Sales Analysis with GCP and Looker Studio</h3>
-        <p>Analyzed Amazon sales data using GCP and Looker Studio.</p>
-        <p>Leveraged Big Query for data extraction and developed visualizations in Looker.</p>
-        <p>Enabled strategic decision-making, leading to improved profitability and customer satisfaction.</p>
-    </div>
-    <div class="project-details" id="cms-data">
-        <h3>Analysis of CMS Data for Healthcare Insights</h3>
-        <p>Analyzed CMS data for over 3,000 U.S. hospitals, covering more than seven million discharges categorized by Medicare Severity Diagnosis Related Group (DRG).</p>
-        <p>Identified heart-related conditions (e.g., heart transplants, heart assist systems) as the most frequent and costly diagnoses.</p>
-        <p>Provided actionable insights, recommending increased production of heart-related drugs, specialized doctors, and medical equipment.</p>
-        <p>Suggested preventive measures, such as healthy lifestyle choices and regular monitoring of risk factors, to reduce the prevalence and cost of heart-related conditions.</p>
-        <p>Utilized AI and machine learning techniques to predict future medical concerns, improving drug accessibility for a wider population.</p>
-    </div>
-</section>-->
 
 
 <section id="projects">
@@ -256,6 +274,8 @@ eligibility and provider network analytics, improving data accessibility for cli
 
     </div>
 </section>
+
+
 <section id="contact" class="contact-container">
         <h2  class="section-header">Contact</h2>
                     <div class="social-links">
@@ -264,15 +284,18 @@ eligibility and provider network analytics, improving data accessibility for cli
                         <a href="mailto:taddisaideep@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                         <a href="tel:+1 940-231-4270"><i class="fa-solid fa-phone"></i></a> 
                     </div> 
+
                     
 </section>
     <footer class="footer" >
         <p>&copy; 2022 Saideep Taddi. All rights reserved.</p>
     </footer>
+   
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
     <script src="script.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+
 </body>
 </html>
