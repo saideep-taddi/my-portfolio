@@ -188,4 +188,21 @@ function toggleSkills() {
         button.innerHTML = '<i class="fa-solid fa-lock"></i> Unlock Skills'; // Change back to Unlock Skills
     }
 }
+function toggleSkills() {
+    document.getElementById("skillsList").style.display = "block";
+  }
+  
+  // Obfuscated version
+  var _0xabc=function(){document['getElementById']('skillsList')['style']['display']='block';};
+  
+  
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.onkeydown = function(e) {
+    if (e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) || 
+        (e.ctrlKey && e.key === 'U')) {
+        return false;
+    }
+};
+
 
