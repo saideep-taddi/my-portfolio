@@ -723,3 +723,7 @@ strong {
     color: rgba(0, 255, 127, 0.3); /* Neon Green */
     font-weight: bold;
 }
+.main-container .image img {
+    width: 100%;
+    display: block;
+}
