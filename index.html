@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
 <div id="progress"></div>
 
 <nav>
@@ -17,6 +19,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-status"><div class="nav-dot"></div> Open to Hire</div>
@@ -227,6 +230,97 @@
     <div class="cert-card reveal d2"><div class="cert-ico">📊</div><div><div class="cert-name">Google Advanced Data Analytics Specialization</div><div class="cert-by">Google</div></div></div>
   </div>
 </section>
+
+
+<!-- PROJECTS -->
+<section class="section reveal" id="projects">
+  <div class="sec-label">Featured Work</div>
+  <h2 class="sec-title">Projects & <em>Case Studies</em></h2>
+  <p style="font-size:0.85rem;color:var(--text2);margin-top:-36px;margin-bottom:36px;">Click any project to explore outcomes, visualizations & tech stack ↓</p>
+  <div class="projects-grid">
+
+    <div class="proj-card reveal d1" onclick="window.location.href='projects.html'">
+      <div class="proj-header">
+        <div class="proj-icon">🏥</div>
+        <div class="proj-tags"><span class="ptag ptag-mint">Python</span><span class="ptag ptag-gold">ML</span><span class="ptag ptag-dim">Healthcare</span></div>
+      </div>
+      <div class="proj-title">ML on Medicare Services</div>
+      <div class="proj-desc">Applied Machine Learning to analyze and predict patterns in Medicare services data — improving healthcare efficiency and optimizing service costs.</div>
+      <div class="proj-metrics">
+        <div class="pm"><div class="pm-val">5+</div><div class="pm-lbl">ML Models</div></div>
+        <div class="pm"><div class="pm-val">EDA</div><div class="pm-lbl">Full Analysis</div></div>
+        <div class="pm"><div class="pm-val">RF</div><div class="pm-lbl">Best Model</div></div>
+      </div>
+      <div class="exp-tags"><span class="etag">Python</span><span class="etag">Scikit-learn</span><span class="etag">Random Forest</span></div>
+      <div class="proj-click-hint">→ View full case study</div>
+    </div>
+
+    <div class="proj-card reveal d2" onclick="window.location.href='projects.html'">
+      <div class="proj-header">
+        <div class="proj-icon">🏠</div>
+        <div class="proj-tags"><span class="ptag ptag-mint">R Shiny</span><span class="ptag ptag-gold">ML</span><span class="ptag ptag-dim">Real Estate</span></div>
+      </div>
+      <div class="proj-title">California Housing Price Predictor</div>
+      <div class="proj-desc">Interactive R Shiny web app predicting California house prices using Random Forest & Linear Regression, with Leaflet maps and real-time predictions.</div>
+      <div class="proj-metrics">
+        <div class="pm"><div class="pm-val">2</div><div class="pm-lbl">ML Models</div></div>
+        <div class="pm"><div class="pm-val">Live</div><div class="pm-lbl">Predictions</div></div>
+        <div class="pm"><div class="pm-val">Map</div><div class="pm-lbl">Geo Viz</div></div>
+      </div>
+      <div class="exp-tags"><span class="etag">R Shiny</span><span class="etag">Random Forest</span><span class="etag">Leaflet</span></div>
+      <div class="proj-click-hint">→ View full case study</div>
+    </div>
+
+    <div class="proj-card reveal d1" onclick="window.location.href='projects.html'">
+      <div class="proj-header">
+        <div class="proj-icon">🛒</div>
+        <div class="proj-tags"><span class="ptag ptag-mint">BigQuery</span><span class="ptag ptag-gold">Looker</span><span class="ptag ptag-dim">E-Commerce</span></div>
+      </div>
+      <div class="proj-title">Amazon Sales Analytics — GCP</div>
+      <div class="proj-desc">Analyzed Amazon product sales data using Google BigQuery and Looker Studio to uncover how ratings, pricing, and discounts drive revenue and customer behavior.</div>
+      <div class="proj-metrics">
+        <div class="pm"><div class="pm-val">GCP</div><div class="pm-lbl">Cloud</div></div>
+        <div class="pm"><div class="pm-val">4</div><div class="pm-lbl">Key Questions</div></div>
+        <div class="pm"><div class="pm-val">BI</div><div class="pm-lbl">Dashboards</div></div>
+      </div>
+      <div class="exp-tags"><span class="etag">BigQuery</span><span class="etag">Looker Studio</span><span class="etag">Python</span></div>
+      <div class="proj-click-hint">→ View full case study</div>
+    </div>
+
+    <div class="proj-card reveal d2" onclick="window.location.href='projects.html'">
+      <div class="proj-header">
+        <div class="proj-icon">🏀</div>
+        <div class="proj-tags"><span class="ptag ptag-mint">R</span><span class="ptag ptag-gold">Predictive</span><span class="ptag ptag-dim">Sports</span></div>
+      </div>
+      <div class="proj-title">NBA Player Performance Predictor</div>
+      <div class="proj-desc">Predicted NBA player performance using R with Linear Regression, Random Forest & Decision Trees — Random Forest outperformed all models in accuracy.</div>
+      <div class="proj-metrics">
+        <div class="pm"><div class="pm-val">3</div><div class="pm-lbl">ML Models</div></div>
+        <div class="pm"><div class="pm-val">PER</div><div class="pm-lbl">Key Metric</div></div>
+        <div class="pm"><div class="pm-val">RF</div><div class="pm-lbl">Best Model</div></div>
+      </div>
+      <div class="exp-tags"><span class="etag">R</span><span class="etag">ggplot2</span><span class="etag">Random Forest</span></div>
+      <div class="proj-click-hint">→ View full case study</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="proj-modal" id="projModal">
+  <div class="proj-modal-backdrop" onclick="closeProject()"></div>
+  <div class="proj-modal-box" id="projModalBox">
+    <div class="proj-modal-header">
+      <div class="pmh-left">
+        <div class="pmh-icon" id="mIcon"></div>
+        <div class="pmh-title" id="mTitle"></div>
+        <div class="pmh-tags" id="mTags"></div>
+      </div>
+      <button class="modal-close" onclick="closeProject()">✕</button>
+    </div>
+    <div class="proj-modal-body" id="mBody"></div>
+  </div>
+</div>
 
 <!-- CONTACT -->
 <section class="section section-alt reveal" id="contact">
